@@ -1,0 +1,651 @@
+<html lang="en"><head><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WCZ63SDMM7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WCZ63SDMM7');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime+ Active Order Page</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #111827;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 18px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .logo-icon {
+      background: #0057b8;
+      color: white;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #f5a400;
+    }
+
+    .secure {
+      color: #6b7280;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: auto;
+      padding: 48px 20px;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 32px;
+    }
+
+    .badge {
+      display: inline-flex;
+      background: #dbeafe;
+      color: #0057b8;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #6b7280;
+      font-size: 19px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    }
+
+    .product-card {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+    }
+
+    .product-image {
+      min-height: 190px;
+      padding: 24px;
+      color: white;
+      background: linear-gradient(135deg, #041e42, #0f4c81, #00a8e1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-play {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+    }
+
+    .product-prime {
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .product-active {
+      color: #ffb300;
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 4px;
+    }
+
+    .product-details {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product-label {
+      color: #0057b8;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .product-details h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .card-header {
+      background: #f3f4f6;
+      padding: 18px 24px;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .card-body {
+      padding: 24px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .label {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .value {
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .muted {
+      color: #6b7280;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .benefit {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .benefit:last-child {
+      margin-bottom: 0;
+    }
+
+    .benefit-icon {
+      background: #dbeafe;
+      color: #0057b8;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .benefit-title {
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .summary {
+      border-top: 5px solid #0057b8;
+      position: sticky;
+      top: 100px;
+    }
+
+    .plan {
+      background: #f3f4f6;
+      padding: 18px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      color: #6b7280;
+      gap: 16px;
+    }
+
+    .row strong {
+      color: #111827;
+      text-align: right;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 18px 0;
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .total .amount {
+      font-size: 28px;
+    }
+
+    .payment {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .order-meta {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 24px;
+    }
+
+    .button-area {
+      background: #f9fafb;
+      padding: 24px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    button {
+      width: 100%;
+      height: 52px;
+      background: #0057b8;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #004494;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.85;
+    }
+
+    .confirmation {
+      display: none;
+      background: #dbeafe;
+      color: #0057b8;
+      border: 1px solid #93c5fd;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+      font-weight: 800;
+      margin-top: 16px;
+    }
+
+    .terms {
+      font-size: 11px;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.4;
+    }
+
+    footer {
+      background: #f3f4f6;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 40px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 36px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .support {
+      text-align: right;
+    }
+
+    .support-number {
+      color: #0057b8;
+      font-size: 26px;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+
+    .disclaimer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+      header {
+        padding: 16px 20px;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .support {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" width="110" height="40" style="border-radius:8px; object-fit:contain;"/>
+       <span></span>
+    </div>
+
+    <div class="secure">🔒 Secure Checkout</div>
+  </header>
+
+  <main>
+    <section>
+      <div class="badge">✓ ORDER PAID.</div>
+
+      <h1>Urgent Review Required:</h1>
+
+      <p class="subtitle">
+        Suspicious Login and Order on Your Account.
+      </p>
+
+      <div class="card product-card">
+        <div class="product-image">
+          <div class="product-play">▶</div>
+
+          <div>
+            <div class="product-prime">Amazon Services</div>
+            <div class="product-active">AMAZON.COM, INC 2026</div>
+          </div>
+        </div>
+
+        <div class="product-details">
+          <div class="product-label">Product Details</div>
+
+          <h2>IPHONE 16 PRO
+          <p class="muted">
+            iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">PRODUCT DETAILS</div>
+
+        <div class="card-body">
+          <div class="info-grid">
+            <div>
+              <div class="label">Apple Iphone 16 pro </div>
+              <div class="value">265GB:5G</div>
+              <div class="muted">Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black</div>
+            </div>
+
+            <div>
+              <div class="label">Billing Address</div>
+              <div class="value">
+                1234 Streaming Blvd, Suite 400<br>
+                Los Angeles, CA 90028<br>
+                United States
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Shop With Confidence </div>
+
+        <div class="card-body">
+          <div class="benefit">
+            <div class="benefit-icon">📺</div>
+            <div>
+              <div class="benefit-title">10 days service center replacement</div>
+              <div class="muted">Without any charge.</div>
+            </div>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">⚡</div>
+            <div>
+              <div class="benefit-title">Free delivery</div>
+              <div class="muted">The product is eligible for Free delivery.</div>
+            </div>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">🛡</div>
+            <div>
+              <div class="benefit-title">1 Year Warranty</div>
+              <div class="muted">1 year standard warranty for manufacturing defects & 6 months for accessories.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside>
+      <div class="card summary">
+        <div class="card-body">
+          <h2>Order Summary</h2>
+          <p class="muted" style="margin: 8px 0 22px;">Apple Iphone 16 pro </p>
+
+          <div class="order-meta">
+            <div class="row">
+              <span>Order Placed</span>
+              <strong id="orderDate">04/25/2026</strong>
+            </div>
+
+            <div class="row">
+              <span>Time</span>
+              <strong id="orderTime">12:42:44 AM</strong>
+            </div>
+
+            <div class="row">
+              <span>Invoice ID</span>
+              <strong id="invoiceId">INV-20260425-505301</strong>
+            </div>
+
+            <div class="row" style="margin-bottom: 0;">
+              <span>Transaction ID</span>
+              <strong id="transactionId">TXN-20260425-54455770</strong>
+            </div>
+          </div>
+
+          <div class="plan">
+            <div>
+              <div class="value">Apple Iphone 16 pro </div>
+              <div class="muted"></div>
+            </div>
+
+            <div class="price">$899.00</div>
+          </div>
+
+          <div class="row">
+            <span>Subtotal</span>
+            <strong>$899.00</strong>
+          </div>
+
+          <div class="row">
+            <span>Taxes &amp; Fees</span>
+            <strong>$0.00</strong>
+          </div>
+
+          <hr>
+
+          <div class="total">
+            <span>Total Due Today</span>
+            <span class="amount">$899.00</span>
+          </div>
+
+          <div class="payment">
+            <div>
+              <div class="value">Thank you for shopping with us! We value your business and will deliver your order soon.
+              
+For product inquiries, Contact support at +1 828-373-9373.</div>
+              <div class="muted"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-area">
+          <button id="confirmBtn" onclick="confirmOrder()" disabled="">Order Confirmed</button>
+
+          <div id="confirmationMsg" class="confirmation" style="display: block;">
+            Your order is confirmed. Money will be debited from your bank account.
+          </div>
+
+          <div class="terms">
+            Order Confirmed Sucessfully, You agree to our Terms of Service,
+            Official Amazon checkout.
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+<div class="support">
+        <div>Need help with your order?</div>
+        <div class="support-number">Amazon Support: 746-866-5755</div>
+      </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="logo">
+        <img src="logo.png" width="40" height="40" style="border-radius:8px; object-fit:contain;"/>
+        Amazon.com, Inc 2026.<span></span>
+      </div>
+
+    <div class="disclaimer">
+      DISCLAIMER: THIS TRANSACTION IS COMPLETED BY AMAZON.COM, INC 2026.
+    </div>
+  </div></footer>
+
+  <script>
+    const now = new Date();
+
+    const date = now.toLocaleDateString("en-US", {
+      month: "2-digit",
+      day: "2-digit",
+      year: "numeric"
+    });
+
+    const time = now.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true
+    });
+
+    const dateStamp =
+      now.getFullYear().toString() +
+      String(now.getMonth() + 1).padStart(2, "0") +
+      String(now.getDate()).padStart(2, "0");
+
+    const randomNumber = Math.floor(100000 + Math.random() * 900000);
+
+    document.getElementById("orderDate").textContent = date;
+    document.getElementById("orderTime").textContent = time;
+    document.getElementById("invoiceId").textContent = "INV-" + dateStamp + "-" + randomNumber;
+    document.getElementById("transactionId").textContent = "TXN-" + dateStamp + "-" + Math.floor(10000000 + Math.random() * 90000000);
+
+    function confirmOrder() {
+      const button = document.getElementById("confirmBtn");
+      const message = document.getElementById("confirmationMsg");
+
+      button.disabled = true;
+      button.textContent = "Processing...";
+
+      setTimeout(function () {
+        button.textContent = "Order Confirmed";
+        message.style.display = "block";
+      }, 2000);
+    }
+  </script>
+
+
+</body></html>

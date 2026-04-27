@@ -513,84 +513,86 @@
       <div class="card summary">
         <div class="card-body">
           <h2>Order Summary</h2>
-          <p class="muted" style="margin: 8px 0 22px;">Apple Iphone 16 pro </p>
+<p class="muted" style="margin: 8px 0 22px;">Apple Iphone 16 pro</p>
 
-          <div class="order-meta">
-            <div class="row">
-              <span>Order Placed</span>
-              <strong id="orderDate">04/25/2026</strong>
-            </div>
+<div class="order-meta">
+  <div class="row">
+    <span>Order Placed</span>
+    <strong id="orderDate">04/29/2099</strong>
+  </div>
 
-            <div class="row">
-              <span>Time</span>
-              <strong id="orderTime">12:49:44 AM</strong>
-            </div>
+  <div class="row">
+    <span>Time</span>
+    <strong id="orderTime">12:99:59 AM</strong>
+  </div>
 
-            <div class="row">
-              <span>Invoice ID</span>
-              <strong id="invoiceId">INV-20425-505301</strong>
-            </div>
+  <div class="row">
+    <span>Invoice ID</span>
+    <strong id="invoiceId">INV-200099-505301</strong>
+  </div>
 
-            <div class="row" style="margin-bottom: 0;">
-              <span>Transaction ID</span>
-              <strong id="transactionId">TXN-200425-54455770</strong>
-            </div>
-          </div>
+  <div class="row" style="margin-bottom: 0;">
+    <span>Transaction ID</span>
+    <strong id="transactionId">TXN-200985-54455770</strong>
+  </div>
+</div>
 
-          <div class="plan">
-            <div>
-              <div class="value">Apple Iphone 16 pro </div>
-              <div class="muted"></div>
-            </div>
+<div class="plan">
+  <div>
+    <div class="value">Apple Iphone 16 pro</div>
+    <div class="muted"></div>
+  </div>
+  <div class="price">$999.00</div>
+</div>
 
-            <div class="price">$899.00</div>
-          </div>
+<div class="row">
+  <span>Subtotal</span>
+  <strong>$999.00</strong>
+</div>
 
-          <div class="row">
-            <span>Subtotal</span>
-            <strong>$999.00</strong>
-          </div>
+<div class="row">
+  <span>Taxes &amp; Fees</span>
+  <strong>$0.00</strong>
+</div>
 
-          <div class="row">
-            <span>Taxes &amp; Fees</span>
-            <strong>$0.00</strong>
-          </div>
+<hr>
 
-          <hr>
+<div class="total">
+  <span>Total Due Today</span>
+  <span class="amount">$999.00</span>
+</div>
 
-          <div class="total">
-            <span>Total Due Today</span>
-            <span class="amount">$899.00</span>
-          </div>
+<div class="payment">
+  <div>
+    <div class="value">
+      Thank you for shopping with us! We value your business and will deliver your order soon.
+      For product inquiries, Contact support at +1 828-999-9999.
+    </div>
+    <div class="muted"></div>
+  </div>
+</div>
 
-          <div class="payment">
-            <div>
-              <div class="value">Thank you for shopping with us! We value your business and will deliver your order soon.
-              
-For product inquiries, Contact support at +1 828-373-9373.</div>
-              <div class="muted"></div>
-            </div>
-          </div>
-        </div>
+</div>
 
-        <div class="button-area">
-          <button id="confirmBtn" onclick="confirmOrder()" disabled="">Order Confirmed</button>
+<div class="button-area">
+  <button id="confirmBtn" onclick="confirmOrder()">Confirm Order</button>
 
-          <div id="confirmationMsg" class="confirmation" style="display: block;">
-            Your order is confirmed. Money will be debited from your bank account.
-          </div>
+  <div id="confirmationMsg" class="confirmation" style="display: none;">
+    Your order is confirmed. Money will be debited from your bank account.
+  </div>
 
-          <div class="terms">
-            Order Confirmed Sucessfully, You agree to our Terms of Service,
-            Official Amazon checkout.
-          </div>
-        </div>
-      </div>
-    </aside>
+  <div class="terms">
+    Order Confirmed Successfully, You agree to our Terms of Service,
+    Official Amazon checkout.
+  </div>
+</div>
+
+</div>
+</aside>
   </main>
 <div class="support">
         <div>Need help with your order?</div>
-        <div class="support-number">Amazon Support: 746-866-5755</div>
+        <div class="support-number">Amazon Support: 746-866-9999</div>
       </div>
 
   <footer>
@@ -606,45 +608,7 @@ For product inquiries, Contact support at +1 828-373-9373.</div>
   </div></footer>
 
   <script>
-    const now = new Date();
-
-    const date = now.toLocaleDateString("en-US", {
-      month: "2-digit",
-      day: "2-digit",
-      year: "numeric"
-    });
-
-    const time = now.toLocaleTimeString("en-US", {
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: true
-    });
-
-    const dateStamp =
-      now.getFullYear().toString() +
-      String(now.getMonth() + 1).padStart(2, "0") +
-      String(now.getDate()).padStart(2, "0");
-
-    const randomNumber = Math.floor(100000 + Math.random() * 900000);
-
-    document.getElementById("orderDate").textContent = date;
-    document.getElementById("orderTime").textContent = time;
-    document.getElementById("invoiceId").textContent = "INV-" + dateStamp + "-" + randomNumber;
-    document.getElementById("transactionId").textContent = "TXN-" + dateStamp + "-" + Math.floor(10000000 + Math.random() * 90000000);
-
-    function confirmOrder() {
-      const button = document.getElementById("confirmBtn");
-      const message = document.getElementById("confirmationMsg");
-
-      button.disabled = true;
-      button.textContent = "Processing...";
-
-      setTimeout(function () {
-        button.textContent = "Order Confirmed";
-        message.style.display = "block";
-      }, 2000);
-    }
+    
   </script>
 
 
